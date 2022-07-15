@@ -40,7 +40,10 @@ def mediapipe_detection(image, model):
     image.flags.writeable = True                   # Image is now writeable 
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR) # COLOR COVERSION RGB 2 BGR
     #image =  cv2.resize(image , (int(width*1.5), int(height*1.5))) #サイズ1.5倍
-    image =  cv2.resize(image , (int(width*2.5), int(height*2.5))) #サイズ1.5倍
+    #image =  cv2.resize(image , (int(width*2.5), int(height*2.5))) #サイズ1.5倍
+    #OC使用時は↓
+    image =  cv2.resize(image , (int(width*1.3), int(height*1.3))) #サイズ1.3倍
+
     return image, results
 
 
